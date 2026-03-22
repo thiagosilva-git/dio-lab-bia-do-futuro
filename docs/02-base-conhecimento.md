@@ -2,17 +2,12 @@
 
 ## Dados Utilizados
 
-Descreva se usou os arquivos da pasta `data`, por exemplo:
-
-| Arquivo | Formato | Utilização no Agente |
+| Arquivo | Formato | Para que serve o Mario? |
 |---------|---------|---------------------|
-| `historico_atendimento.csv` | CSV | Contextualizar interações anteriores |
-| `perfil_investidor.json` | JSON | Personalizar recomendações |
-| `produtos_financeiros.json` | JSON | Sugerir produtos adequados ao perfil |
-| `transacoes.csv` | CSV | Analisar padrão de gastos do cliente |
-
-> [!TIP]
-> **Quer um dataset mais robusto?** Você pode utilizar datasets públicos do [Hugging Face](https://huggingface.co/datasets) relacionados a finanças, desde que sejam adequados ao contexto do desafio.
+| `historico_atendimento.csv` | CSV | Contextualizar interações anteriores. |
+| `perfil_investidor.json` | JSON | Personalizar explicações sobre dúvidas e necessidades. |
+| `produtos_financeiros.json` | JSON | Conhecer produtos disponíveis a fim de ensiná-los ao usuário. |
+| `transacoes.csv` | CSV | Analisar padrão de gastos do cliente a fim de utilizá-los de forma didática. |
 
 ---
 
@@ -20,7 +15,7 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 
 > Você modificou ou expandiu os dados mockados? Descreva aqui.
 
-[Sua descrição aqui]
+Nenhum dado foi modificado.
 
 ---
 
@@ -29,12 +24,12 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 ### Como os dados são carregados?
 > Descreva como seu agente acessa a base de conhecimento.
 
-[ex: Os JSON/CSV são carregados no início da sessão e incluídos no contexto do prompt]
+Duas possibilidades: injetar diretamente os dados no prompt (Ctrl + c, Ctrl + v), ou carregar os arquivos via código, como no exemplo abaixo.
 
 ### Como os dados são usados no prompt?
 > Os dados vão no system prompt? São consultados dinamicamente?
 
-[Sua descrição aqui]
+Os dados são "injetados" no prompt, garantindo que o agente tenha o melhor contexto possível. Em situações mais robustas, o ideal será carregar dinamicamente.
 
 ---
 
